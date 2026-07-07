@@ -11,7 +11,7 @@ namespace ConsoleApp1.models
         [Key] //auto-generated
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
-        public int? userId {  get; set; }//system generated
+        public int?     UserId {  get; set; }//system generated
 
         [Required]
         [MaxLength(50)]

@@ -48,6 +48,6 @@ namespace ConsoleApp1.models
 
         public List<Review>? Reviews { get; set; }
 
-        public List<Order> Orders { get; set; }= new List<Order>();
+        public List<OrderItem>? OrderItems { get; set; }
     }
 }

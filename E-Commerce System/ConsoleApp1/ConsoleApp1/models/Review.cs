@@ -20,6 +20,7 @@ namespace ConsoleApp1.models
         [ForeignKey("product")]
         public int? ProductId { get; set; }//ForeignKey
 
+
         [Required]
         [Range(1,5)]
         public int Rating { get; set; }//user input 

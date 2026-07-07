@@ -22,7 +22,7 @@ namespace ConsoleApp1.models
         [MaxLength(300)]
         public string? ImageUrl { get; set; }//user input
 
-        public List<Product> Products { get; set; }
+        public List<Product>? Products { get; set; }
 
 
     }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ConsoleApp1.Migrations
 {
     [DbContext(typeof(ECommerceContext))]
-    [Migration("20260705072018_AA")]
-    partial class AA
+    [Migration("20260707085018_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -90,6 +90,35 @@ namespace ConsoleApp1.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("ConsoleApp1.models.OrderItem", b =>
+                {
+                    b.Property<int>("OrderItemId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderItemId"));
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("OrderItemId");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("ConsoleApp1.models.Product", b =>
@@ -173,11 +202,11 @@ namespace ConsoleApp1.Migrations
 
             modelBuilder.Entity("ConsoleApp1.models.User", b =>
                 {
-                    b.Property<int?>("userId")
+                    b.Property<int?>("UserId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("userId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("UserId"));
 
                     b.Property<string>("Address")
                         .HasMaxLength(300)
@@ -213,24 +242,9 @@ namespace ConsoleApp1.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("userId");
+                    b.HasKey("UserId");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("OrderProduct", b =>
-                {
-                    b.Property<int>("OrdersOrderId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("productsProductId")
-                        .HasColumnType("int");
-
-                    b.HasKey("OrdersOrderId", "productsProductId");
-
-                    b.HasIndex("productsProductId");
-
-                    b.ToTable("OrderProduct");
                 });
 
             modelBuilder.Entity("ConsoleApp1.models.Order", b =>
@@ -242,6 +256,25 @@ namespace ConsoleApp1.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ConsoleApp1.models.OrderItem", b =>
+                {
+                    b.HasOne("ConsoleApp1.models.Order", "Order")
+                        .WithMany("OrderItems")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ConsoleApp1.models.Product", "Product")
+                        .WithMany("OrderItems")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("ConsoleApp1.models.Product", b =>
@@ -274,28 +307,20 @@ namespace ConsoleApp1.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("OrderProduct", b =>
-                {
-                    b.HasOne("ConsoleApp1.models.Order", null)
-                        .WithMany()
-                        .HasForeignKey("OrdersOrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ConsoleApp1.models.Product", null)
-                        .WithMany()
-                        .HasForeignKey("productsProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("ConsoleApp1.models.Category", b =>
                 {
                     b.Navigation("Products");
                 });
 
+            modelBuilder.Entity("ConsoleApp1.models.Order", b =>
+                {
+                    b.Navigation("OrderItems");
+                });
+
             modelBuilder.Entity("ConsoleApp1.models.Product", b =>
                 {
+                    b.Navigation("OrderItems");
+
                     b.Navigation("Reviews");
                 });
 

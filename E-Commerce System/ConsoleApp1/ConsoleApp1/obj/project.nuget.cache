@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dDKI2ZyehIY=",
+  "dgSpecHash": "0UOsWECDC0k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\dreea\\Downloads\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+  "projectFilePath": "C:\\Users\\dreea\\Downloads\\E-Commerce System (2)\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dreea\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\dreea\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -72,9 +72,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.10.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
-      "projectPath": "C:\\Users\\dreea\\Downloads\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectPath": "C:\\Users\\dreea\\Downloads\\E-Commerce System (2)\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\dreea\\Downloads\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+      "filePath": "C:\\Users\\dreea\\Downloads\\E-Commerce System (2)\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net10.0"
@@ -84,9 +84,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Azure.Identity' 1.10.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-wvxc-855f-jvrv",
-      "projectPath": "C:\\Users\\dreea\\Downloads\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectPath": "C:\\Users\\dreea\\Downloads\\E-Commerce System (2)\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\dreea\\Downloads\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+      "filePath": "C:\\Users\\dreea\\Downloads\\E-Commerce System (2)\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
       "libraryId": "Azure.Identity",
       "targetGraphs": [
         "net10.0"
@@ -96,9 +96,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'Microsoft.Identity.Client' 4.56.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m5vv-6r4h-3vj9",
-      "projectPath": "C:\\Users\\dreea\\Downloads\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectPath": "C:\\Users\\dreea\\Downloads\\E-Commerce System (2)\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\dreea\\Downloads\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+      "filePath": "C:\\Users\\dreea\\Downloads\\E-Commerce System (2)\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
       "libraryId": "Microsoft.Identity.Client",
       "targetGraphs": [
         "net10.0"
@@ -108,9 +108,9 @@
       "code": "NU1901",
       "level": "Warning",
       "message": "Package 'Microsoft.Identity.Client' 4.56.0 has a known low severity vulnerability, https://github.com/advisories/GHSA-x674-v45j-fwxw",
-      "projectPath": "C:\\Users\\dreea\\Downloads\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectPath": "C:\\Users\\dreea\\Downloads\\E-Commerce System (2)\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\dreea\\Downloads\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+      "filePath": "C:\\Users\\dreea\\Downloads\\E-Commerce System (2)\\E-Commerce System\\E-Commerce System\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
       "libraryId": "Microsoft.Identity.Client",
       "targetGraphs": [
         "net10.0"

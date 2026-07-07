@@ -39,7 +39,7 @@ namespace ConsoleApp1.models
 
         public User? User { get; set; }//from list
 
-        public List<Product> products { get; set; }= new List<Product>();
+        public List<OrderItem>? OrderItems { get; set; }
 
     }
 }
