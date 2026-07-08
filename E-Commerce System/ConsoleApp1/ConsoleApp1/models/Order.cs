@@ -37,11 +37,17 @@ namespace ConsoleApp1.models
         [MaxLength(50)]
         public string? PaymentMethod { get; set; }//user input
 
+<<<<<<< HEAD
         public virtual User? User { get; set; }//from list
 
         public virtual List<OrderItem>? OrderItems { get; set; }
 
         public virtual List<Product> products { get; set; }= new List<Product>();
+=======
+        public User? User { get; set; }//from list
+
+        public List<OrderItem>? OrderItems { get; set; }
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
 
     }
 }

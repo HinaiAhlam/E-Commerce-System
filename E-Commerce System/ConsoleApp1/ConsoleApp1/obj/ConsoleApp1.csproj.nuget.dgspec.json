@@ -56,10 +56,13 @@
               "target": "Package",
               "version": "[8.0.10, )"
             },
+<<<<<<< HEAD
             "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
               "version": "[8.0.10, )"
             },
+=======
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.10, )"

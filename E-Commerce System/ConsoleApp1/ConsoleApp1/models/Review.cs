@@ -21,8 +21,11 @@ namespace ConsoleApp1.models
         public int? ProductId { get; set; }//ForeignKey
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
         [Required]
         [Range(1,5)]
         public int Rating { get; set; }//user input 
@@ -33,8 +36,13 @@ namespace ConsoleApp1.models
         [Required]
         public DateTime ReviewDate { get; set; }//SYSTEM GENERATION
 
+<<<<<<< HEAD
         public virtual User? User { get; set; }//from list
          public virtual Product? Product { get; set; }//from list
+=======
+        public User? User { get; set; }//from list
+         public Product? Product { get; set; }//from list
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
 
 
     }

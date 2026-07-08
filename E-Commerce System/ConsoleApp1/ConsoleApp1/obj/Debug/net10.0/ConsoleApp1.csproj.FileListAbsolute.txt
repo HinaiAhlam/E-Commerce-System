@@ -135,6 +135,9 @@ C:\Users\dreea\Downloads\E-Commerce System\E-Commerce System\ConsoleApp1\Console
 C:\Users\dreea\Downloads\E-Commerce System\E-Commerce System\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.genruntimeconfig.cache
 C:\Users\dreea\Downloads\E-Commerce System\E-Commerce System\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ref\ConsoleApp1.dll
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
 C:\Users\dreea\Downloads\E-Commerce System (2)\E-Commerce System\E-Commerce System\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.csproj.AssemblyReference.cache
 C:\Users\dreea\Downloads\E-Commerce System (2)\E-Commerce System\E-Commerce System\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\dreea\Downloads\E-Commerce System (2)\E-Commerce System\E-Commerce System\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.AssemblyInfoInputs.cache
@@ -272,5 +275,8 @@ C:\Users\dreea\Downloads\E-Commerce System (2)\E-Commerce System\E-Commerce Syst
 C:\Users\dreea\Downloads\E-Commerce System (2)\E-Commerce System\E-Commerce System\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleA.CB28C8CC.Up2Date
 C:\Users\dreea\Downloads\E-Commerce System (2)\E-Commerce System\E-Commerce System\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.genruntimeconfig.cache
 C:\Users\dreea\Downloads\E-Commerce System (2)\E-Commerce System\E-Commerce System\ConsoleApp1\ConsoleApp1\obj\Debug\net10.0\ref\ConsoleApp1.dll
+<<<<<<< HEAD
 =======
 >>>>>>> 71f9ccca0a0ce1b0dafa82765b78d0b1e02e2e4c
+=======
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336

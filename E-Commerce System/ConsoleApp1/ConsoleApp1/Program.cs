@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 using ConsoleApp1;
+=======
+﻿using ConsoleApp1;
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
 using ConsoleApp1.models;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +16,7 @@ class Program
     //1
     static void RegisterUser()
     {
+<<<<<<< HEAD
         Console.WriteLine("\n--- User Registration ---");
 
         //Create a new User object from user inputs
@@ -22,6 +27,14 @@ class Program
         string email = Console.ReadLine();
 
         //Set registrationDate to DateTime.Now and isActive to true
+=======
+        Console.Write("Enter Username: "); 
+        string name = Console.ReadLine();
+
+        Console.Write("Enter Email: "); 
+        string email = Console.ReadLine();
+
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
         var u = new User
         {
             Username = name,
@@ -31,27 +44,36 @@ class Program
             RegistrationDate = DateTime.Now,
             IsActive = true
         };
+<<<<<<< HEAD
 
         //Call context.Users.Add() then context.SaveChanges()
         context.Users.Add(u);
         context.SaveChanges();
 
         //Display the assigned userId after saving
+=======
+        context.Users.Add(u);
+        context.SaveChanges(); // INSERT INTO Users
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
         Console.WriteLine($"User registered with ID: {u.UserId}");
     }
 
     //2
     static void AddProductToCategory()
     {
+<<<<<<< HEAD
         Console.WriteLine("\n--- Add New Product ---");
 
 
         //Display all categories with context.Categories.ToList()
+=======
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
         Console.WriteLine("\n***************** Available Categories *************");
         context.Categorys.ToList().ForEach(c =>
         Console.WriteLine($"ID: {c.CategoryId} |" +
                           $" Name: {c.CategoryName}"));
 
+<<<<<<< HEAD
 
         //Read category selection and all product details from the user
         Console.Write("Enter Category ID (from list above): ");
@@ -66,16 +88,33 @@ class Program
 
         //Set createdAt to DateTime.Now and isAvailable to true
         var newProduct = new Product
+=======
+        Console.Write("Enter Category ID: ");
+        int catId = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter Product Name: "); 
+        string? pName = Console.ReadLine();
+
+        Console.Write("Enter Price: "); 
+        decimal price = decimal.Parse(Console.ReadLine());
+
+        context.Products.Add(new Product
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
         {
             ProductName = pName,
             Price = price,
             CategoryId = catId,
             CreatedAt = DateTime.Now,
             IsAvailable = true
+<<<<<<< HEAD
         };
 
         context.Products.Add(newProduct);
         //Call context.Products.Add() then context.SaveChanges()
+=======
+        });
+
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
         context.SaveChanges();
         Console.WriteLine("Product added successfully!");
     }
@@ -92,6 +131,7 @@ class Program
                               $"Stock: {p.StockQuantity}"));
 
 
+<<<<<<< HEAD
         Console.Write("\nEnter User ID: ");
         int uId = int.Parse(Console.ReadLine());
 
@@ -103,6 +143,15 @@ class Program
             Status = "pending",
             TotalAmount = 0
         };
+=======
+        Console.Write("\nEnter User ID: "); 
+        int uId = int.Parse(Console.ReadLine());
+
+        var order = new Order { UserId = uId,
+                                OrderDate = DateTime.Now, 
+                                Status = "pending",
+                                TotalAmount = 0 };
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
 
 
         context.Orders.Add(order);
@@ -111,18 +160,26 @@ class Program
         decimal runningTotal = 0;
         bool addingItem = true;
 
+<<<<<<< HEAD
 
         //Let the user add multiple products — for each one create an OrderItem record
+=======
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
         while (addingItem)
         {
             Console.Write("\nEnter Product ID to add: ");
             int pId = int.Parse(Console.ReadLine());
 
+<<<<<<< HEAD
             Console.Write("Enter Quantity: ");
+=======
+            Console.Write("Enter Quantity: "); 
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
             int qty = int.Parse(Console.ReadLine());
 
             var prod = context.Products.Find(pId);
 
+<<<<<<< HEAD
             if (prod != null && prod.StockQuantity >= qty)
             {
 
@@ -149,11 +206,24 @@ class Program
             {
                 Console.WriteLine("Error: Product not found or insufficient stock!");
             }
+=======
+            context.OrderItems.Add(new OrderItem { OrderId = order.OrderId,
+                                                   ProductId = pId,
+                                                   Quantity = qty,
+                                                   UnitPrice = prod.Price });
+
+            runningTotal += (prod.Price * qty);
+            prod.StockQuantity -= qty;
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
 
             Console.Write("Add another product? (y/n): ");
             addingItem = Console.ReadLine().ToLower() == "y";
         }
+<<<<<<< HEAD
         //Decrement stockQuantity on each product and call SaveChanges()
+=======
+
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
         order.TotalAmount = runningTotal;
 
         context.SaveChanges();
@@ -164,6 +234,7 @@ class Program
     //4
     static void WriteReview()
     {
+<<<<<<< HEAD
         Console.WriteLine("\n***************** Submit a Product Review *************");
 
 
@@ -177,11 +248,22 @@ class Program
 
 
         Console.Write("\nEnter User ID: ");
+=======
+        Console.WriteLine("\n***************** Available Users *************");
+
+        context.Users.ToList().ForEach(u => 
+        Console.WriteLine($"ID: {u.UserId} |" +
+                          $" Name: {u.Username}"));
+
+
+        Console.Write("\nEnter User ID: "); 
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
         int uId = int.Parse(Console.ReadLine());
 
         Console.Write("Enter Product ID: ");
         int pId = int.Parse(Console.ReadLine());
 
+<<<<<<< HEAD
         Console.Write("Enter Rating (1-5): ");
         int rating = int.Parse(Console.ReadLine());
 
@@ -205,6 +287,21 @@ class Program
         context.SaveChanges();
 
 
+=======
+        Console.Write("Enter Rating (1-5): "); 
+        int rating = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter Comment: "); 
+        string comment = Console.ReadLine();
+
+
+        context.Reviews.Add(new Review { UserId = uId,
+                                      ProductId = pId,
+                                         Rating = rating,
+                                        Comment = comment, 
+                                     ReviewDate = DateTime.Now });
+        context.SaveChanges();
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
         Console.WriteLine("Review added successfully!");
     }
 
@@ -213,15 +310,27 @@ class Program
     {
         Console.WriteLine("\n**************************** Update Product **********************");
 
+<<<<<<< HEAD
         //call product by id 
         Console.Write("\nEnter Product ID to update: ");
         int pId = int.Parse(Console.ReadLine());
 
         //Fetch the product using context.Products.FirstOrDefault()
+=======
+        context.Products.ToList().ForEach(p =>
+        Console.WriteLine($"ID: {p.ProductId} | " +
+                        $"Name: {p.ProductName} | " +
+                       $"Price: {p.Price}"));
+
+        Console.Write("\nEnter Product ID to update: "); 
+        int pId = int.Parse(Console.ReadLine());
+
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
         var product = context.Products.FirstOrDefault(p => p.ProductId == pId);
 
         if (product != null)
         {
+<<<<<<< HEAD
             Console.Write("Enter New Price: ");
             product.Price = decimal.Parse(Console.ReadLine());
 
@@ -239,6 +348,17 @@ class Program
         {
             Console.WriteLine(" \n Error : not found !");
         }
+=======
+            Console.Write("Enter New Price: "); 
+            product.Price = decimal.Parse(Console.ReadLine());
+
+            Console.Write("Is Available (true/false): ");
+            product.IsAvailable = bool.Parse(Console.ReadLine());
+
+            context.SaveChanges(); 
+            Console.WriteLine("Product updated successfully.");
+        }
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
     }
 
 
@@ -247,6 +367,7 @@ class Program
 
 
     //6
+<<<<<<< HEAD
     static void CancelOrder()
     {
         //call the order bu id 
@@ -511,21 +632,50 @@ class Program
             Console.WriteLine("No order history found for this user.");
         }
     }
+=======
+    static void CancelOrder() { }
+
+
+    //7
+    static void DeleteReview() { }
+
+
+    //8
+    static void ViewAllProducts() { }
+
+
+    //9
+    static void FilterProducts() { }
+
+
+    //10
+    static void GetCategoryWithProducts() { }
+
+
+    //11
+    static void ViewOrderHistory() { }
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
 
 
 
     //12
     static void ProductSummary() { }
 
+<<<<<<< HEAD
     
+=======
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
 
 
 
 
+<<<<<<< HEAD
 
 
 
     //المين
+=======
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
     static void Main(string[] args)
     {
         while (true)
@@ -574,3 +724,7 @@ class Program
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336

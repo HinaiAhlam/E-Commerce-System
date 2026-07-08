@@ -19,12 +19,20 @@ namespace ConsoleApp1.models
 
         [ForeignKey("Order")] // Foreign Key
         public int OrderId { get; set; }
+<<<<<<< HEAD
         public virtual Order? Order { get; set; } // Navigation Property
+=======
+        public Order? Order { get; set; } // Navigation Property
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
 
 
         [ForeignKey("Product")] // Foreign Key
         public int ProductId { get; set; }
+<<<<<<< HEAD
         public virtual Product? Product { get; set; }
+=======
+        public Product? Product { get; set; }
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
 
     }
 }

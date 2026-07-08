@@ -17,7 +17,10 @@ namespace ConsoleApp1
         public DbSet<Review> Reviews { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer("server =localhost; Database= ECommerceDB;Trusted_Connection=True;TrustServerCertificate=True; ");

@@ -22,9 +22,13 @@ namespace ConsoleApp1.models
         [MaxLength(300)]
         public string? ImageUrl { get; set; }//user input
 
+<<<<<<< HEAD
 
         public virtual List<Product>? Products { get; set; }
 
+=======
+        public List<Product>? Products { get; set; }
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
 
 
     }

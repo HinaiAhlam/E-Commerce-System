@@ -44,11 +44,19 @@ namespace ConsoleApp1.models
         [Required]
         public bool IsAvailable { get; set; }//defoult value
 
+<<<<<<< HEAD
         public virtual Category? Category { get; set; }
 
         public List<Review>? Reviews { get; set; }
 
         public virtual List<OrderItem>? OrderItems { get; set; }
         public virtual List<Order> Orders { get; set; }= new List<Order>();
+=======
+        public Category? Category { get; set; }
+
+        public List<Review>? Reviews { get; set; }
+
+        public List<OrderItem>? OrderItems { get; set; }
+>>>>>>> e3a488a8b64bee08a36bd90f0228c24da580a336
     }
 }
